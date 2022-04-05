@@ -1,0 +1,33 @@
+/* Page */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "utmavo";
+  src: url("/styles/utm-avo/utmavo.eot");
+  src: local("utmavo"), url("/styles/utm-avo/utmavo.woff") format("woff"),
+    url("/styles/utm-avo/utmavo.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.hide {
+  display: none;
+}
+.active {
+  display: block;
+}
