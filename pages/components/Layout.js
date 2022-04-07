@@ -128,24 +128,40 @@ const Layout = ({ children }) => {
               logo
             </a> */}
           </header>
-          <div
-            className={
-              scrollColor
-                ? "mainContainer-ccc"
-                : scrollUp
-                ? "mainContainer-aaa"
-                : "hide"
-            }
-            onClick={handlerOpenMenu}
-          >
-            <i
-              className={
-                menumobile
-                  ? "mainContainer-aaa-icon fas fa-close"
-                  : "mainContainer-aaa-icon fas fa-bars"
-              }
-            />
-          </div>
+          {scrollColor ? (
+            <div className="mainContainer-ccc" onClick={handlerOpenMenu}>
+              <i
+                className={
+                  menumobile
+                    ? "mainContainer-aaa-icon fas fa-close"
+                    : "mainContainer-aaa-icon fas fa-bars"
+                }
+              />
+            </div>
+          ) : (
+            <div
+              className={scrollUp ? "mainContainer-aaa" : "hide"}
+              onClick={handlerOpenMenu}
+            >
+              <i
+                className={
+                  menumobile
+                    ? "mainContainer-aaa-icon fas fa-close"
+                    : "mainContainer-aaa-icon fas fa-bars"
+                }
+              />
+              <div className="mainContainer-aaa-img">
+                <Image
+                  src={`/image/home_page/logo_1.png`}
+                  alt="description of image"
+                  layout="fill"
+                  data-testid="close-icon"
+                  objectFit="contain"
+                />
+              </div>
+              <i className="mainContainer-aaa-icon fas fa-phone" />
+            </div>
+          )}
 
           <div
             className={scrollDown ? "mainContainer-bbb" : "hide"}
