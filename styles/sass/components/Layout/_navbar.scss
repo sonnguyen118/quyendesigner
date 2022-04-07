@@ -1,7 +1,9 @@
 .navbar {
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
   z-index: 5;
+  // background-color: opacity;
+  -webkit-transition: all 1s ease;
   &-image {
     z-index: 5;
     background-image: url("/image/home_page/baner_top_heder.png"); /* The image used */
@@ -25,8 +27,8 @@
     &-img2 {
       z-index: 5;
       background-image: url("/image/home_page/background_btn.png"); /* The image used */
-      height: 40px;
-      width: 206px;
+      height: 50px;
+      width: 257.5px;
       // width: 200px; /* You must set a specified height */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
@@ -42,9 +44,23 @@
         text-align: center;
         letter-spacing: 3px;
         margin: 0;
-        line-height: 40px;
+        line-height: 50px;
       }
     }
+  }
+
+  &-scroll {
+    margin: 0 !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $color-white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    // animation: changebackground 2s ease;
+    -webkit-transition: all 1s ease;
+    // -moz-transition: all 1s ease;
+    // -o-transition: all 1s ease;
+    // transition: all 1s ease;
   }
 }
 
@@ -241,4 +257,104 @@
   transform: translate(0, 25px) scale(1);
   pointer-events: auto;
   z-index: 5;
+}
+
+// nút cuộn trang back to top
+.home-back-to-top {
+  position: fixed;
+  top: 80vh;
+  right: 5vw;
+  &:hover {
+    cursor: pointer;
+  }
+  &-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+// responsive for PC
+@include responsive_768 {
+  .navbar {
+    margin: 20px 0 0 0;
+    padding: 0;
+    z-index: 5;
+    width: 100vw !important;
+    // background-color: opacity;
+    -webkit-transition: all 1s ease;
+    &-image {
+      z-index: 5;
+      background-image: url("/image/home_page/baner_top_heder.png"); /* The image used */
+      height: 20px; /* You must set a specified height */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    &-main {
+      z-index: 5;
+      margin: 0 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-img1 {
+        position: relative;
+        height: 64px;
+        width: 273px;
+        z-index: 5;
+      }
+      &-img2 {
+        z-index: 5;
+        background-image: url("/image/home_page/background_btn.png"); /* The image used */
+        height: 50px;
+        width: 257.5px;
+        // width: 200px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        &-span {
+          font-size: 16px;
+          color: $color-white;
+          text-align: center;
+          letter-spacing: 3px;
+          margin: 0;
+          line-height: 50px;
+        }
+      }
+    }
+
+    &-scroll {
+      margin: 0 !important;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: $color-white;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      // animation: changebackground 2s ease;
+      -webkit-transition: all 1s ease;
+      // -moz-transition: all 1s ease;
+      // -o-transition: all 1s ease;
+      // transition: all 1s ease;
+    }
+  }
+}
+
+@include responsive_992 {
+}
+
+@include responsive_1024 {
+}
+
+@include responsive_1200 {
+}
+@include responsive_1440 {
+}
+@include responsive_1650 {
+}
+@include responsive_1900 {
 }

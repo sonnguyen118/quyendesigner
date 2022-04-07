@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
-const index = () => {
+const Home = () => {
+  const [navbar, setNavbar] = useState(true);
+  useEffect(function onFirstMount() {
+    window.addEventListener("scroll", changeBackground);
+    // window.addEventListener("scroll", SetbackToTop);
+  }, []);
+  const changeBackground = () => {
+    if (window.scrollY >= 1) {
+      setNavbar(false);
+    } else {
+      setNavbar(true);
+    }
+  };
   return (
     <Layout>
       <div className="home">
@@ -43,7 +55,7 @@ const index = () => {
             </span>
           </div>
         </div>
-        <div className="home-block2">
+        <div className={navbar ? "home-block2" : "home-block2 magrin-top-50px"}>
           <p className="home-block2-title">KHÁCH HÀNG CỦA TÔI</p>
           <div className="home-block2-group">
             <div className="home-block2-group-img">
@@ -319,4 +331,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

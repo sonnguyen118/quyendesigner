@@ -1,11 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
+  // code bật tắt sub menu
+  const [menu1, setMenu1] = useState(false);
+  const [menu2, setMenu2] = useState(false);
+  const [menu3, setMenu3] = useState(false);
+
+  const handleOpenMenu1 = () => {
+    setMenu1(true);
+  };
+  const handleCloseMenu1 = () => {
+    setMenu1(false);
+  };
+  const handleOpenMenu2 = () => {
+    setMenu2(true);
+  };
+  const handleCloseMenu2 = () => {
+    setMenu2(false);
+  };
+  const handleOpenMenu3 = () => {
+    setMenu3(true);
+  };
+  const handleCloseMenu3 = () => {
+    setMenu3(false);
+  };
+  //lo gic cuộn navabar fixed
+  const [navbar, setNavbar] = useState(true);
+  useEffect(function onFirstMount() {
+    window.addEventListener("scroll", changeBackground);
+    // window.addEventListener("scroll", SetbackToTop);
+  }, []);
+  const changeBackground = () => {
+    if (window.scrollY >= 1) {
+      setNavbar(false);
+    } else {
+      setNavbar(true);
+    }
+  };
+
   return (
-    <div className="navbar">
+    <div className={navbar ? "navbar" : "navbar navbar-scroll"}>
       <div className="navbar-image"></div>
-      <div className="navbar-main">
+      <div className="navbar-main ">
         <div className="navbar-main-img1">
           <Image
             src={`/image/home_page/logo_1.png`}
@@ -22,7 +59,13 @@ const Navbar = () => {
                 <i className="navigation-logo-home fas fa-home"></i>
               </a>
             </li>
-            <li className="nav-item dropdown show-submenu">
+            <li
+              className={
+                menu1 ? "nav-item dropdown show-submenu" : "nav-item dropdown"
+              }
+              onMouseOver={handleOpenMenu1}
+              onMouseOut={handleCloseMenu1}
+            >
               <a href="#" className="nav-link">
                 <span>Dịch vụ</span>
               </a>
@@ -46,7 +89,13 @@ const Navbar = () => {
                 </ul>
               </nav>
             </li>
-            <li className="nav-item dropdown">
+            <li
+              className={
+                menu2 ? "nav-item dropdown show-submenu" : "nav-item dropdown"
+              }
+              onMouseOver={handleOpenMenu2}
+              onMouseOut={handleCloseMenu2}
+            >
               <a href="#" className="nav-link">
                 <span>Dự án</span>
               </a>
@@ -83,7 +132,13 @@ const Navbar = () => {
                 </ul>
               </nav>
             </li>
-            <li className="nav-item dropdown">
+            <li
+              className={
+                menu3 ? "nav-item dropdown show-submenu" : "nav-item dropdown"
+              }
+              onMouseOver={handleOpenMenu3}
+              onMouseOut={handleCloseMenu3}
+            >
               <a href="#" className="nav-link">
                 <span>Liên hệ</span>
               </a>

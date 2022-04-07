@@ -26,8 +26,29 @@ p {
   padding: 0;
 }
 .hide {
-  display: none;
+  // display: none;
+  // animation-name: hide;
+  // animation-duration: 2s;
+  // animation-timing-function: ease;
+  // // opacity: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.7s, opacity 1.5s ease;
 }
 .active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.7s, opacity 1.5s ease;
+}
+
+// @keyframes hide {
+//   from {
+//     display: block;
+//   }
+//   to {
+//     display: none;
+//   }
+// }
+.magrin-top-50px {
+  padding-top: 100px;
 }
