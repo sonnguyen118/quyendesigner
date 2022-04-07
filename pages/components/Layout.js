@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
   useEffect(function onFirstMount() {
     // window.addEventListener("scroll", changeBackground);
     window.addEventListener("scroll", SetbackToTop);
+    var windowScrollY = window.scrollY;
   }, []);
   const SetbackToTop = () => {
     if (window.scrollY >= 150) {
@@ -37,10 +38,12 @@ const Layout = ({ children }) => {
   };
 
   // code hiệu ứng scroll down up
-  const [y, setY] = useState(window.scrollY);
+  var windowScrollY;
+  const [y, setY] = useState(windowScrollY);
   const [scrollUp, setScrollUp] = useState(true);
   const [scrollDown, setScrollDown] = useState(false);
   const [scrollColor, setScrollColor] = useState(true);
+
   const handleNavigation = useCallback(
     (e) => {
       const window = e.currentTarget;
