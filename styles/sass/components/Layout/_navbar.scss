@@ -358,3 +358,38 @@
 }
 @include responsive_1900 {
 }
+
+// hide for Mobile devices
+
+@include responsive_200 {
+  .navbar {
+    display: none !important;
+  }
+}
+@include responsive_280 {
+  .navbar {
+    display: none !important;
+  }
+}
+@include responsive_320 {
+  .navbar {
+    display: none !important;
+  }
+}
+
+@include responsive_375 {
+  .navbar {
+    display: none !important;
+  }
+}
+
+@include responsive_425 {
+  .navbar {
+    display: none !important;
+  }
+}
+@include responsive_456 {
+  .navbar {
+    display: none !important;
+  }
+}

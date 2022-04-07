@@ -52,3 +52,15 @@ p {
 .magrin-top-50px {
   padding-top: 100px;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
