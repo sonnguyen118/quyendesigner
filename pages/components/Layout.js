@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   useEffect(function onFirstMount() {
     // window.addEventListener("scroll", changeBackground);
     window.addEventListener("scroll", SetbackToTop);
-    var windowScrollY = window.scrollY;
+    // var windowScrollY = window.scrollY;
   }, []);
   const SetbackToTop = () => {
     if (window.scrollY >= 150) {

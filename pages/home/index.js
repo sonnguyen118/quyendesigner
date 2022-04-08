@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 const Home = () => {
@@ -14,6 +14,43 @@ const Home = () => {
       setNavbar(true);
     }
   };
+
+  // slide show block 1 menu mobile mode
+  //
+  var windowScrollY;
+  const [y, setY] = useState(windowScrollY);
+  const [scrollUp, setScrollUp] = useState(true);
+  const [scrollDown, setScrollDown] = useState(false);
+  const [scrollColor, setScrollColor] = useState(true);
+
+  const handleNavigation = useCallback(
+    (e) => {
+      const window = e.currentTarget;
+      if (window.scrollY == 0) {
+        setScrollColor(true);
+        setScrollUp(true);
+        setScrollDown(false);
+      } else if (y > window.scrollY) {
+        setScrollUp(true);
+        setScrollDown(false);
+        setScrollColor(false);
+      } else if (y < window.scrollY) {
+        setScrollUp(false);
+        setScrollDown(true);
+        setScrollColor(false);
+      }
+      setY(window.scrollY);
+    },
+    [y]
+  );
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
   return (
     <Layout>
       <div className="home">
@@ -55,7 +92,130 @@ const Home = () => {
             </span>
           </div>
         </div>
-        <div className={navbar ? "home-block2" : "home-block2 magrin-top-50px"}>
+        <div className="home-block1mobile">
+          <div className="CSSgal">
+            {/* Don't wrap targets in parent */}
+            <s id="s1" />
+            <s id="s2" />
+            <s id="s3" />
+            <s id="s4" />
+            <div className="home-block1mobile-slider slider">
+              <div className="home-block1mobile-infor slider-image-1">
+                <div className="home-block1mobile-infor-img">
+                  <Image
+                    src={`/image/home_page/logo_1.png`}
+                    alt="description of image"
+                    layout="fill"
+                    data-testid="close-icon"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="home-block1mobile-infor-text">
+                  Đến với{" "}
+                  <span className="home-block1mobile-infor-text-hightlight">
+                    Tôi
+                  </span>
+                  , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
+                  sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
+                  phong cách riêng.
+                </div>
+              </div>
+              <div className="home-block1mobile-infor slider-image-2">
+                <div className="home-block1mobile-infor-img">
+                  <Image
+                    src={`/image/home_page/logo_1.png`}
+                    alt="description of image"
+                    layout="fill"
+                    data-testid="close-icon"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="home-block1mobile-infor-text">
+                  Đến với{" "}
+                  <span className="home-block1mobile-infor-text-hightlight">
+                    Tôi
+                  </span>
+                  , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
+                  sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
+                  phong cách riêng.
+                </div>
+              </div>
+              <div className="home-block1mobile-infor slider-image-3">
+                <div className="home-block1mobile-infor-img">
+                  <Image
+                    src={`/image/home_page/logo_1.png`}
+                    alt="description of image"
+                    layout="fill"
+                    data-testid="close-icon"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="home-block1mobile-infor-text">
+                  Đến với{" "}
+                  <span className="home-block1mobile-infor-text-hightlight">
+                    Tôi
+                  </span>
+                  , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
+                  sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
+                  phong cách riêng.
+                </div>
+              </div>
+              <div className="home-block1mobile-infor slider-image-4">
+                <div className="home-block1mobile-infor-img">
+                  <Image
+                    src={`/image/home_page/logo_1.png`}
+                    alt="description of image"
+                    layout="fill"
+                    data-testid="close-icon"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="home-block1mobile-infor-text">
+                  Đến với{" "}
+                  <span className="home-block1mobile-infor-text-hightlight">
+                    Tôi
+                  </span>
+                  , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
+                  sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
+                  phong cách riêng.
+                </div>
+              </div>
+            </div>
+            <div className="prevNext">
+              <div>
+                <a href="#s4" />
+                <a href="#s2" />
+              </div>
+              <div>
+                <a href="#s1" />
+                <a href="#s3" />
+              </div>
+              <div>
+                <a href="#s2" />
+                <a href="#s4" />
+              </div>
+              <div>
+                <a href="#s3" />
+                <a href="#s1" />
+              </div>
+            </div>
+            <div className="bullets">
+              <a href="#s1"></a>
+              <a href="#s2"></a>
+              <a href="#s3"></a>
+              <a href="#s4"></a>
+            </div>
+          </div>
+        </div>
+        <div
+          className={
+            navbar
+              ? "home-block2"
+              : scrollUp
+              ? "block2 magrin-top-50px"
+              : "block2 magrin-top-60px"
+          }
+        >
           <p className="home-block2-title">KHÁCH HÀNG CỦA TÔI</p>
           <div className="home-block2-group">
             <div className="home-block2-group-img">

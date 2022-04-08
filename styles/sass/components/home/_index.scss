@@ -1,3 +1,5 @@
+@import "./slideshow_mobile_UI";
+
 .home {
   &-block1 {
     width: 100%;
@@ -2334,7 +2336,10 @@
 
 @include responsive_375 {
   .magrin-top-50px {
-    margin-top: 0px;
+    margin-top: 400px !important;
+  }
+  .magrin-top-60px {
+    margin-top: 320px !important;
   }
   body {
     overflow-x: hide;
@@ -2344,6 +2349,7 @@
   }
   .home {
     &-block1 {
+      display: none;
       width: 100%;
       position: absolute;
       top: 0;
@@ -2380,9 +2386,15 @@
           }
         }
       }
+      &mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 20;
+      }
     }
     &-block2 {
-      margin-top: 43vw;
+      margin-top: 50vw;
       &-title {
         text-align: center;
         font-size: 18px;
@@ -2644,6 +2656,12 @@
 }
 
 @include responsive_425 {
+  .magrin-top-50px {
+    margin-top: 400px !important;
+  }
+  .magrin-top-60px {
+    margin-top: 320px !important;
+  }
   body {
     overflow-x: hide;
   }
@@ -2690,7 +2708,7 @@
       }
     }
     &-block2 {
-      margin-top: 43vw;
+      margin-top: 80vw;
       &-title {
         text-align: center;
         font-size: 18px;
@@ -2952,7 +2970,10 @@
 }
 @include responsive_456 {
   .magrin-top-50px {
-    margin-top: 0px;
+    margin-top: 400px !important;
+  }
+  .magrin-top-60px {
+    margin-top: 320px !important;
   }
   body {
     overflow-x: hide;
@@ -3000,7 +3021,7 @@
       }
     }
     &-block2 {
-      margin-top: 43vw;
+      margin-top: 405px;
       &-title {
         text-align: center;
         font-size: 18px;
