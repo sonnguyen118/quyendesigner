@@ -218,7 +218,7 @@
     border-radius: 50%;
     bottom: 10px;
     right: 10px;
-    z-index: 50;
+    z-index: 150;
     background-color: $color-white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     &:hover {
@@ -930,10 +930,20 @@
   .mainMenu {
     display: none;
   }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
+    display: none;
+  }
 }
 
 @include responsive_992 {
   .mainMenu {
+    display: none;
+  }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
     display: none;
   }
 }
@@ -942,10 +952,20 @@
   .mainMenu {
     display: none;
   }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
+    display: none;
+  }
 }
 
 @include responsive_1200 {
   .mainMenu {
+    display: none;
+  }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
     display: none;
   }
 }
@@ -953,14 +973,29 @@
   .mainMenu {
     display: none;
   }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
+    display: none;
+  }
 }
 @include responsive_1650 {
   .mainMenu {
     display: none;
   }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
+    display: none;
+  }
 }
 @include responsive_1900 {
   .mainMenu {
+    display: none;
+  }
+  .mainContainer-aaa,
+  .mainContainer-ccc,
+  .mainContainer-bbb {
     display: none;
   }
 }
