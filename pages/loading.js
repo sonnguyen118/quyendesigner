@@ -13,6 +13,9 @@ const Loading = () => {
           objectFit="contain"
         />
       </div>
+      <p className="loading-text">
+        Đang tải dữ liệu vui lòng đợi trong giây lát ...
+      </p>
     </div>
   );
 };

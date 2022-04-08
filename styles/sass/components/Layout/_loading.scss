@@ -1,0 +1,25 @@
+.loading {
+  &-img {
+    width: 252px;
+    height: 256px;
+    position: relative;
+    animation: rotation 2s infinite linear;
+    margin: 30vh auto 6vh auto;
+  }
+  &-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: $color-primary;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

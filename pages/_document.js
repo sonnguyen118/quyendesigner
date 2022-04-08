@@ -7,13 +7,13 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charset="utf-8" />
-          <link rel="icon" href="/media/logo-red.png" />
+          <link rel="icon" href="/image/home_page/icon_quyendesign__.png" />
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#000000" />
           <meta
             name="description"
-            content="Web site created using create-react-app"
+            content="Quyen Nguyen Designer , Art 2D 3D"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
             referrerpolicy="no-referrer"
           />
 
-          <title>Một Thuở Binh Đao 3D Studio &amp; Features | Criti 3D</title>
+          <title>Quyen Nguyen Designer &amp; Designer | Art 2D - 3D</title>
         </Head>
         <body>
           <Main />

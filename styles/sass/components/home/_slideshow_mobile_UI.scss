@@ -233,15 +233,24 @@ http://stackoverflow.com/a/34696029/383904
       z-index: 10;
       &-img {
         position: relative;
-        width: 230px;
-        height: 50px;
-        margin: 100px auto 0 auto;
+        width: 220px;
+        height: 45px;
+        margin: 50px auto 0 auto;
+        top: 60px;
       }
       &-text {
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 160px;
+        border-radius: 10px;
+        // width: 80%;
         font-size: 10px;
         font-weight: 300;
         color: $color-black;
-        margin: 20px 20%;
+        margin: 0px 20%;
+        padding-top: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 16px;
         &-hightlight {
           font-size: 12px;
           font-weight: 600;
@@ -249,6 +258,31 @@ http://stackoverflow.com/a/34696029/383904
         }
       }
     }
+  }
+  .CSSgal .prevNext a {
+    background: #fff;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* If you want to place numbers */
+    text-align: center;
+    opacity: 0.7;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .CSSgal .bullets > a {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    line-height: 6px;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
 }
 
