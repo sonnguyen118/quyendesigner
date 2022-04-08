@@ -2336,10 +2336,10 @@
 
 @include responsive_375 {
   .magrin-top-50px {
-    margin-top: 400px !important;
+    margin-top: 360px !important;
   }
   .magrin-top-60px {
-    margin-top: 320px !important;
+    margin-top: 270px !important;
   }
   body {
     overflow-x: hide;
@@ -2394,7 +2394,7 @@
       }
     }
     &-block2 {
-      margin-top: 50vw;
+      margin-top: 95vw;
       &-title {
         text-align: center;
         font-size: 18px;
@@ -2404,17 +2404,18 @@
         margin-bottom: 25px;
       }
       &-group {
-        margin: 0 5%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         &-img {
           position: relative;
-          height: 30px;
-          width: 20vw;
+          height: 25.5px;
+          width: 133.25px;
           margin-bottom: 20px;
-          margin-right: 40px;
+          margin-left: 20px;
+          margin-right: 10px;
         }
       }
     }
@@ -2608,7 +2609,7 @@
     &-block6 {
       background-image: url("/image/home_page/block6.png"); /* The image used */
       height: 14.78vw;
-      margin: 50px 5%; /* You must set a specified height */
+      margin: 50px 5px; /* You must set a specified height */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
@@ -2621,8 +2622,8 @@
         align-items: center;
         &-logo {
           position: relative;
-          height: 50px;
-          width: 50px;
+          height: 40px;
+          width: 40px;
         }
         &-text {
           margin-left: 10px;
@@ -2632,20 +2633,20 @@
             color: $color-white;
           }
           &-body {
-            margin-top: 10px;
-            font-size: 9px;
+            margin-top: 8px;
+            font-size: 8px;
             font-weight: 300;
             color: $color-white;
           }
         }
       }
       &-btn {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
         color: $color-primary;
         background-color: $color-white;
         border-radius: 10px;
-        padding: 10px 15px;
+        padding: 10px 10px;
         &:hover {
           cursor: pointer;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -2708,7 +2709,7 @@
       }
     }
     &-block2 {
-      margin-top: 80vw;
+      margin-top: 96vw;
       &-title {
         text-align: center;
         font-size: 18px;
@@ -2922,7 +2923,7 @@
     &-block6 {
       background-image: url("/image/home_page/block6.png"); /* The image used */
       height: 14.78vw;
-      margin: 50px 5%; /* You must set a specified height */
+      margin: 50px 5px; /* You must set a specified height */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
@@ -2947,14 +2948,14 @@
           }
           &-body {
             margin-top: 10px;
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 300;
             color: $color-white;
           }
         }
       }
       &-btn {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
         color: $color-primary;
         background-color: $color-white;
