@@ -1,0 +1,41 @@
+.namecard {
+  &-block1 {
+    background-color: $color-secondary;
+    height: 300px;
+    &-title {
+      padding-top: 80px;
+      text-align: center;
+      font-size: 58px;
+      font-weight: 700;
+      color: $color-black;
+      letter-spacing: 1px;
+      &-hightlight {
+        color: $color-primary;
+        font-size: 58px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+    &-main {
+      width: 40%;
+      padding-top: 20px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 16px;
+      font-weight: 300;
+      color: $color-black;
+      letter-spacing: 1px;
+      line-height: 24px;
+    }
+  }
+  &-block2 {
+  }
+  &-block3 {
+  }
+  &-block4 {
+  }
+  &-block5 {
+  }
+  &-block6 {
+  }
+}

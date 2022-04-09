@@ -1,0 +1,96 @@
+@import "./name_card";
+
+.projects {
+  &-block1 {
+    background-color: $color-secondary;
+    height: 550px;
+    display: flex;
+    padding: 0 15%;
+    justify-content: space-between;
+    align-items: center;
+    &-content {
+      width: 40%;
+      &-title {
+        margin-top: 10px;
+        font-size: 46px;
+        font-weight: 600;
+        color: $color-black;
+        letter-spacing: 1px;
+        &-hightlight {
+          margin-top: 10px;
+          font-size: 46px;
+          font-weight: 600;
+          color: $color-primary;
+          letter-spacing: 1px;
+        }
+      }
+      &-main {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 300;
+        color: $color-black;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 24px;
+      }
+    }
+    &-img {
+      position: relative;
+      height: 400px;
+      width: 400px;
+      margin-top: 40px;
+    }
+  }
+
+  &-block2 {
+    display: flex;
+    margin: 100px 15% 0 15%;
+    &-title {
+      min-width: 35%;
+      margin-top: 10px;
+      font-size: 26px;
+      font-weight: 600;
+      color: $color-primary;
+      letter-spacing: 1px;
+    }
+    &-group {
+      display: flex;
+      justify-content: space-between;
+      width: 65%;
+      flex-wrap: wrap !important;
+      &-box {
+        border-radius: 10px;
+        width: 400px;
+        // height: 150px;
+        padding: 20px 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 30px;
+        // margin-right: 50px;
+
+        &-title {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          color: $color-primary;
+          letter-spacing: 1px;
+          // text-align: justify;
+        }
+        &-content {
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 300;
+          color: $color-black;
+          letter-spacing: 1px;
+          text-align: justify;
+          line-height: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+          -webkit-transition: all 1s ease;
+        }
+      }
+    }
+  }
+}
