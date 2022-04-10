@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
+import Link from "next/link";
 const Home = () => {
   const [navbar, setNavbar] = useState(true);
   useEffect(function onFirstMount() {
@@ -295,8 +296,11 @@ const Home = () => {
                 chúng còn có chức năng truyền tải thông điệp của doanh nghiệp
                 đến những khách hàng tiềm năng một cách rõ ràng và đơn giản nhất
               </p>
-              <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              <Link href={`/projects`} passHref>
+                <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              </Link>
             </div>
+
             <div className="home-block3-group-item">
               <div className="home-block3-group-item-logo">
                 <Image
@@ -316,8 +320,11 @@ const Home = () => {
                 sản xuất sản phẩm cuối cùng. Nhưng để sản phẩm làm ra giống nhất
                 với bản thiết kế thì lại là một câu chuyện khác.
               </p>
-              <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              <Link href={`/projects`} passHref>
+                <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              </Link>
             </div>
+
             <div className="home-block3-group-item">
               <div className="home-block3-group-item-logo">
                 <Image
@@ -335,7 +342,9 @@ const Home = () => {
                 vì thế sẽ thật thiếu sót nếu doanh nghiệp của bạn không ứng dụng
                 dịch vụ chụp ảnh vào kinh doanh.
               </p>
-              <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              <Link href={`/projects/photography`} passHref>
+                <div className="home-block3-group-item-btn">Xem chi tiết</div>
+              </Link>
             </div>
           </div>
         </div>
@@ -464,28 +473,30 @@ const Home = () => {
           </div>
           <p className="home-block5-sign">NGUYEN QUYEN</p>
         </div>
-        <div className="home-block6">
-          <div className="home-block6-main">
-            <div className="home-block6-main-logo">
-              <Image
-                src={`/image/home_page/logo_white.png`}
-                alt="description of image"
-                layout="fill"
-                data-testid="close-icon"
-                objectFit="contain"
-              />
-            </div>
-            <div className="home-block6-main-text">
-              <div className="home-block6-main-text-title">
-                Gửi yêu cầu thiết kế
+        <Link href={`/contact`} passHref>
+          <div className="home-block6">
+            <div className="home-block6-main">
+              <div className="home-block6-main-logo">
+                <Image
+                  src={`/image/home_page/logo_white.png`}
+                  alt="description of image"
+                  layout="fill"
+                  data-testid="close-icon"
+                  objectFit="contain"
+                />
               </div>
-              <div className="home-block6-main-text-body">
-                Hãy để tôi đồng hành cùng dự án của quý khách.
+              <div className="home-block6-main-text">
+                <div className="home-block6-main-text-title">
+                  Gửi yêu cầu thiết kế
+                </div>
+                <div className="home-block6-main-text-body">
+                  Hãy để tôi đồng hành cùng dự án của quý khách.
+                </div>
               </div>
             </div>
+            <div className="home-block6-btn">GỬI YÊU CẦU</div>
           </div>
-          <div className="home-block6-btn">GỬI YÊU CẦU</div>
-        </div>
+        </Link>
       </div>
     </Layout>
   );

@@ -169,6 +169,9 @@
       }
     }
     &-block {
+      &:hover {
+        cursor: pointer;
+      }
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -248,6 +251,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    &:hover {
+      cursor: pointer;
+    }
     &-main {
       display: flex;
       align-items: center;

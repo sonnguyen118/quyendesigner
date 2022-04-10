@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   // code bật tắt sub menu
@@ -43,15 +44,18 @@ const Navbar = () => {
     <div className={navbar ? "navbar" : "navbar navbar-scroll"}>
       <div className="navbar-image"></div>
       <div className="navbar-main ">
-        <div className="navbar-main-img1">
-          <Image
-            src={`/image/home_page/logo_1.png`}
-            alt="description of image"
-            layout="fill"
-            data-testid="close-icon"
-            objectFit="contain"
-          />
-        </div>
+        <Link href={`/`} passHref>
+          <div className="navbar-main-img1">
+            <Image
+              src={`/image/home_page/logo_1.png`}
+              alt="description of image"
+              layout="fill"
+              data-testid="close-icon"
+              objectFit="contain"
+            />
+          </div>
+        </Link>
+
         <nav role="navigation" className="nav">
           <ul className="nav-items">
             <li className="nav-item ">
@@ -67,24 +71,60 @@ const Navbar = () => {
               onMouseOut={handleCloseMenu1}
             >
               <a href="#" className="nav-link">
-                <span>Dịch vụ</span>
+                <Link href={`/projects`} passHref>
+                  <span>Dịch vụ</span>
+                </Link>
               </a>
               <nav className="submenu">
                 <ul className="submenu-items">
                   <li className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      Product #1
-                    </a>
+                    <Link
+                      href={`/projects/name_card`}
+                      className="manu-link submenu-link"
+                    >
+                      <p className="manu-link">Name Card</p>
+                    </Link>
                   </li>
                   <li className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      Product #2
-                    </a>
+                    <Link
+                      href={`/projects/catalogue`}
+                      className=" submenu-link"
+                    >
+                      <p className="manu-link">Catalogue</p>
+                    </Link>
                   </li>
                   <li className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      Product #3
-                    </a>
+                    <Link href={`/projects/flyer`} className=" submenu-link">
+                      <p className="manu-link">Tờ rơi</p>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href={`/projects/folder`} className=" submenu-link">
+                      <p className="manu-link">Folder</p>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href={`/projects/poster`} className=" submenu-link">
+                      <p className="manu-link">Poster</p>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href={`/projects/backdrop`} className=" submenu-link">
+                      <p className="manu-link">Backdrop</p>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href={`/projects/calendar`} className=" submenu-link">
+                      <p className="manu-link">Lịch độc quyền</p>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link
+                      href={`/projects/photography`}
+                      className=" submenu-link"
+                    >
+                      <p className="manu-link"> Chụp ảnh sản phẩm</p>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -97,9 +137,11 @@ const Navbar = () => {
               onMouseOut={handleCloseMenu2}
             >
               <a href="#" className="nav-link">
-                <span>Dự án</span>
+                <Link href={`/projects`} passHref>
+                  <span>Dự án</span>
+                </Link>
               </a>
-              <nav className="submenu">
+              {/* <nav className="submenu">
                 <ul className="submenu-items">
                   <li className="submenu-item">
                     <a href="#" className="submenu-link">
@@ -130,7 +172,7 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
             </li>
             <li
               className={
@@ -140,9 +182,11 @@ const Navbar = () => {
               onMouseOut={handleCloseMenu3}
             >
               <a href="#" className="nav-link">
-                <span>Liên hệ</span>
+                <Link href={`/contact`} passHref>
+                  <span>Liên hệ</span>
+                </Link>
               </a>
-              <nav className="submenu">
+              {/* <nav className="submenu">
                 <ul className="submenu-items">
                   <li className="submenu-item">
                     <a href="#" className="submenu-link">
@@ -173,13 +217,15 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
             </li>
           </ul>
         </nav>
-        <div className="navbar-main-img2">
-          <p className="navbar-main-img2-span">GỬI YÊU CẦU</p>
-        </div>
+        <Link href={`/contact`} passHref>
+          <div className="navbar-main-img2">
+            <p className="navbar-main-img2-span">GỬI YÊU CẦU</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
