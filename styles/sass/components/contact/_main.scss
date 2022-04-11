@@ -94,7 +94,7 @@
 }
 
 // Responsive code for responsive
-// responsive
+// responsiveommit
 @include responsive_200 {
 }
 @include responsive_280 {
@@ -320,10 +320,10 @@
 
 @include responsive_375 {
   .magrin-top-up {
-    margin-top: -150px !important;
+    margin-top: -160px !important;
   }
   .magrin-top-down {
-    margin-top: -175px !important;
+    margin-top: -250px !important;
   }
   .contact {
     &-block1 {
@@ -334,7 +334,7 @@
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
-      height: 400px;
+      height: 360px;
       padding: 80px 5% 0 5%;
       margin-top: -150px;
       z-index: 10;
@@ -367,14 +367,14 @@
       display: flex;
       justify-content: space-between;
       position: relative;
-      top: -110px;
+      top: -70px;
       z-index: 10;
       &-box {
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         background: $color-white;
         border-radius: 10px;
         border: 1px solid $color-primary;
-        width: 110px;
+        width: 115px;
         height: 125px;
         &-img {
           margin: 15px auto 10px auto;
@@ -422,7 +422,7 @@
       position: relative;
       height: 285px;
       width: 278px;
-      margin: -60px auto 0 auto;
+      margin: -20px auto 0 auto;
     }
     &-block4 {
     }
@@ -431,10 +431,10 @@
 
 @include responsive_425 {
   .magrin-top-up {
-    margin-top: -150px !important;
+    margin-top: -160px !important;
   }
   .magrin-top-down {
-    margin-top: -175px !important;
+    margin-top: -250px !important;
   }
   .contact {
     &-block1 {
@@ -541,10 +541,10 @@
 }
 @include responsive_456 {
   .magrin-top-up {
-    margin-top: -150px !important;
+    margin-top: -160px !important;
   }
   .magrin-top-down {
-    margin-top: -175px !important;
+    margin-top: -250px !important;
   }
   .contact {
     &-block1 {
