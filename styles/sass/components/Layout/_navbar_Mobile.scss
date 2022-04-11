@@ -3,6 +3,15 @@
 @include responsive_280 {
 }
 @include responsive_320 {
+  .mainMenu > ul > li > i {
+    width: 20px;
+    height: 20px;
+  }
+  .act > i,
+  .act > span {
+    color: $color-primary;
+    font-weight: 600;
+  }
   .cusbody {
     overflow-x: hidden;
     &.act {
@@ -234,6 +243,15 @@
 }
 
 @include responsive_375 {
+  .mainMenu > ul > li > i {
+    width: 20px;
+    height: 20px;
+  }
+  .act > i,
+  .act > span {
+    color: $color-primary;
+    font-weight: 600;
+  }
   .cusbody {
     overflow-x: hidden;
     &.act {
@@ -465,6 +483,15 @@
 }
 
 @include responsive_425 {
+  .mainMenu > ul > li > i {
+    width: 20px;
+    height: 20px;
+  }
+  .act > i,
+  .act > span {
+    color: $color-primary;
+    font-weight: 600;
+  }
   .cusbody {
     overflow-x: hidden;
     &.act {
@@ -695,6 +722,15 @@
   }
 }
 @include responsive_456 {
+  .mainMenu > ul > li > i {
+    width: 20px;
+    height: 20px;
+  }
+  .act > i,
+  .act > span {
+    color: $color-primary;
+    font-weight: 600;
+  }
   .cusbody {
     overflow-x: hidden;
     &.act {

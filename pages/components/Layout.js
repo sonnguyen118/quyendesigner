@@ -2,8 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   const [backtotop, setBackToTop] = useState(false);
   useEffect(function onFirstMount() {
     // window.addEventListener("scroll", changeBackground);
@@ -82,30 +85,37 @@ const Layout = ({ children }) => {
       <div className={menumobile ? "cusbody act" : "cusbody"}>
         <nav className="mainMenu">
           <ul>
-            <li className="act">
-              <a href="#">
-                <i className="fa fa-adjust" />
-                <span>Về Tôi</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-server" />
+            <Link href={"/"} passHref>
+              <li
+                className={router.pathname == "/" ? "act" : ""}
+                onClick={handlerOpenMenu}
+              >
+                <i className="fas fa-home" />
+                <span>Trang Chủ</span>
+              </li>
+            </Link>
+            <Link href={"/projects"} passHref>
+              <li
+                className={router.pathname.includes("/projects") ? "act" : ""}
+                onClick={handlerOpenMenu}
+              >
+                <i className="fas fa-hand-holding" />
                 <span>Dịch Vụ</span>
-              </a>
-            </li>
+              </li>
+            </Link>
             <li>
-              <a href="#">
-                <i className="fa fa-smile-o" />
-                <span>Dự Án</span>
-              </a>
+              <i className="fas fa-award" />
+              <span>Dự Án</span>
             </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-usd" />
+            <Link href={"/contact"} passHref>
+              <li
+                className={router.pathname.includes("/contact") ? "act" : ""}
+                onClick={handlerOpenMenu}
+              >
+                <i className="fas fa-phone"></i>
                 <span>Liên Hệ</span>
-              </a>
-            </li>
+              </li>
+            </Link>
           </ul>
           <div className="mainMenu-contact">
             <div className="mainMenu-contact-img">
@@ -129,8 +139,9 @@ const Layout = ({ children }) => {
             </a> */}
           </header>
           {scrollColor ? (
-            <div className="mainContainer-ccc" onClick={handlerOpenMenu}>
+            <div className="mainContainer-ccc">
               <i
+                onClick={handlerOpenMenu}
                 className={
                   menumobile
                     ? "mainContainer-aaa-icon fas fa-close"
@@ -139,11 +150,9 @@ const Layout = ({ children }) => {
               />
             </div>
           ) : (
-            <div
-              className={scrollUp ? "mainContainer-aaa" : "hide"}
-              onClick={handlerOpenMenu}
-            >
+            <div className={scrollUp ? "mainContainer-aaa" : "hide"}>
               <i
+                onClick={handlerOpenMenu}
                 className={
                   menumobile
                     ? "mainContainer-aaa-icon fas fa-close"
@@ -151,15 +160,19 @@ const Layout = ({ children }) => {
                 }
               />
               <div className="mainContainer-aaa-img">
-                <Image
-                  src={`/image/home_page/logo_1.png`}
-                  alt="description of image"
-                  layout="fill"
-                  data-testid="close-icon"
-                  objectFit="contain"
-                />
+                <Link href={`/`} passHref>
+                  <Image
+                    src={`/image/home_page/logo_1.png`}
+                    alt="description of image"
+                    layout="fill"
+                    data-testid="close-icon"
+                    objectFit="contain"
+                  />
+                </Link>
               </div>
-              <i className="mainContainer-aaa-icon fas fa-phone" />
+              <Link href={`/contact`} passHref>
+                <i className="mainContainer-aaa-icon fas fa-phone" />
+              </Link>
             </div>
           )}
 
