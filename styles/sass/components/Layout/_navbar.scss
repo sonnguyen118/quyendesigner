@@ -24,6 +24,11 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
+  &-imagee {
+    z-index: 5;
+    background-color: $color-white; /* The image used */
+    height: 20px; /* You must set a specified height */
+  }
   &-main {
     z-index: 5;
     margin: 0 15%;

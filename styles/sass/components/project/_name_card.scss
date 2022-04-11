@@ -2,6 +2,7 @@
   &-block1 {
     background-color: $color-secondary;
     height: 300px;
+    margin-top: 15px;
     &-title {
       padding-top: 80px;
       text-align: center;
@@ -595,4 +596,39 @@
 }
 
 .photography {
+}
+
+// Responsive code for responsive
+// responsive
+@include responsive_200 {
+}
+@include responsive_280 {
+}
+@include responsive_320 {
+}
+
+@include responsive_375 {
+}
+
+@include responsive_425 {
+}
+@include responsive_456 {
+}
+
+@include responsive_768 {
+}
+
+@include responsive_992 {
+}
+
+@include responsive_1024 {
+}
+
+@include responsive_1200 {
+}
+@include responsive_1440 {
+}
+@include responsive_1650 {
+}
+@include responsive_1900 {
 }

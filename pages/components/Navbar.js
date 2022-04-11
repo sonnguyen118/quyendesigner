@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className={navbar ? "navbar" : "navbar navbar-scroll"}>
-      <div className="navbar-image"></div>
+      <div className={navbar ? "navbar-imagee" : "navbar-image"}></div>
       <div className="navbar-main ">
         <Link href={`/`} passHref>
           <div className="navbar-main-img1">
