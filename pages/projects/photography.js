@@ -1,13 +1,64 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Layout from "../components/Layout";
 import Link from "next/link";
 
 const Photography = () => {
+  const [navbar, setNavbar] = useState(true);
+  useEffect(function onFirstMount() {
+    window.addEventListener("scroll", changeBackground);
+    // window.addEventListener("scroll", SetbackToTop);
+  }, []);
+  const changeBackground = () => {
+    if (window.scrollY >= 1) {
+      setNavbar(false);
+    } else {
+      setNavbar(true);
+    }
+  };
+  var windowScrollY;
+  const [y, setY] = useState(windowScrollY);
+  const [scrollUp, setScrollUp] = useState(true);
+  const [scrollDown, setScrollDown] = useState(false);
+
+  const handleNavigation = useCallback(
+    (e) => {
+      const window = e.currentTarget;
+      if (window.scrollY == 0) {
+        setScrollUp(true);
+        setScrollDown(false);
+      } else if (y > window.scrollY) {
+        setScrollUp(true);
+        setScrollDown(false);
+      } else if (y < window.scrollY) {
+        setScrollUp(false);
+        setScrollDown(true);
+      }
+      setY(window.scrollY);
+    },
+    [y]
+  );
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
+
   return (
     <Layout>
       <div className="photography">
-        <div className="photography-block1">
+        <div
+          className={
+            navbar
+              ? "photography-block1"
+              : scrollUp
+              ? "photography-block1 magrin-top-up"
+              : "photography-block1 magrin-top-down"
+          }
+        >
           <h1 className="photography-block1-title">
             Chụp ảnh{" "}
             <span className="photography-block1-title-hightlight">
