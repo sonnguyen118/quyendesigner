@@ -102,7 +102,7 @@ const Home = () => {
             <s id="s4" />
             <div className="home-block1mobile-slider slider">
               <div className="home-block1mobile-infor slider-image-1">
-                <div className="home-block1mobile-infor-img">
+                {/* <div className="home-block1mobile-infor-img">
                   <Image
                     src={`/image/home_page/logo_1.png`}
                     alt="description of image"
@@ -119,10 +119,10 @@ const Home = () => {
                   , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
                   sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
                   phong cách riêng.
-                </div>
+                </div> */}
               </div>
               <div className="home-block1mobile-infor slider-image-2">
-                <div className="home-block1mobile-infor-img">
+                {/* <div className="home-block1mobile-infor-img">
                   <Image
                     src={`/image/home_page/logo_1.png`}
                     alt="description of image"
@@ -139,10 +139,10 @@ const Home = () => {
                   , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
                   sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
                   phong cách riêng.
-                </div>
+                </div> */}
               </div>
               <div className="home-block1mobile-infor slider-image-3">
-                <div className="home-block1mobile-infor-img">
+                {/* <div className="home-block1mobile-infor-img">
                   <Image
                     src={`/image/home_page/logo_1.png`}
                     alt="description of image"
@@ -159,10 +159,10 @@ const Home = () => {
                   , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
                   sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
                   phong cách riêng.
-                </div>
+                </div> */}
               </div>
               <div className="home-block1mobile-infor slider-image-4">
-                <div className="home-block1mobile-infor-img">
+                {/* <div className="home-block1mobile-infor-img">
                   <Image
                     src={`/image/home_page/logo_1.png`}
                     alt="description of image"
@@ -179,7 +179,7 @@ const Home = () => {
                   , bạn sẽ làm việc một cách tận tâm và chuyên nghiệp... Những
                   sản phẩm tôi làm ra đều chứa đựng một câu chuyện riêng một
                   phong cách riêng.
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="prevNext">
